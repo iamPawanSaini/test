@@ -1,0 +1,123 @@
+/**
+ * @Files
+ * Package Section Style.
+*/
+.packages-inner {
+  @include lg {
+    @include flex;
+    justify-content: space-between;
+  }
+  .section-heading {
+    margin-bottom: 30px;
+    &__title {
+      @include md {
+        font-size: rem(36);
+        line-height: 43px;
+      }
+    }
+    &__description {
+      @include md {
+        font-size: rem(24);
+        line-height: 28px;
+      }
+    }
+  }
+  &__left {
+    margin-bottom: 60px;
+    @include lg {
+      max-width: calc(50% - 40px);
+      width: 100%;
+      margin-bottom: 0;
+    }
+    &--description {
+      line-height: 32px;
+      margin-bottom: 30px;
+      @include md {
+        margin-bottom: 40px;
+      }
+    }
+    .btn {
+      img {
+        @include md-down {
+          width: 24px;
+        }
+      }
+    }
+  }
+  &__right {
+    @include flex;
+    justify-content: space-between;
+    @include lg {
+      max-width: calc(50% - 40px);
+      width: 100%;
+    }
+
+    .img-wrapper {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__list {
+    counter-reset: my-counter;
+    @include relative;
+    padding-left: 80px;
+    @include md {
+      padding-left: 125px;
+    }
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 3px;
+      background: $color-blue;
+      @include absolute(left 0 top 0);
+    }
+
+    &--item {
+      counter-increment: my-counter;
+      margin-bottom: 22px;
+      @include relative;
+      @include md {
+        margin-bottom: 32px;
+      }
+      &::before {
+        content: counter(my-counter);
+        @include absolute(top 50% left -57px);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid;
+        text-align: center;
+        line-height: 40px;
+        font-size: rem(20);
+        transform: translate(0, -50%);
+
+        @include xl {
+          width: 53px;
+          height: 53px;
+          font-size: rem(28);
+          left: -80px;
+          line-height: 53px;
+        }
+      }
+    }
+    &--title {
+      margin-bottom: 6px;
+      font-size: rem(20);
+      @include xl {
+        margin-bottom: 8px;
+        font-size: rem(28);
+        line-height: 33.6px;
+      }
+    }
+    &--text {
+      font-size: rem(16);
+      @include xl {
+        font-size: rem(20);
+        line-height: 28px;
+      }
+    }
+  }
+}

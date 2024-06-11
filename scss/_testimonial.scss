@@ -1,0 +1,45 @@
+/**
+ * @Files
+ * Testimonial Section Style.
+*/
+.testimonial-slider {
+  &__card {
+    border: 1px solid #433d3d80;
+    background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.04) 8%,
+          #ffffff 50.5%,
+          rgba(255, 255, 255, 0.08) 100%
+        )
+        top / 100% 1px no-repeat,
+      linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.04) 4%,
+          #ffffff 50.5%,
+          rgba(255, 255, 255, 0.05) 100%
+        )
+        bottom / 100% 1px no-repeat;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 64px 40px;
+    background-color: $color-bg-grey;
+  }
+  &__img {
+    margin-bottom: 20px;
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    .img-wrapper {
+      margin-right: 20px;
+    }
+  }
+}
+.testimonial-next {
+  @extend .custom-next;
+}
+.testimonial-prev {
+  @extend .custom-prev;
+}
+.testimonial {
+  position: relative;
+}

@@ -1,0 +1,91 @@
+/**
+ * @Files
+ * About Section Style.
+*/
+
+.about{
+	margin-top: -280px;
+	background: linear-gradient(180deg, rgba(15, 25, 34, 0) 0%, #0F1922 31.4%);
+
+	@include md {
+		margin-top: -400px;
+	}
+}
+
+.about-wrapper {
+	@include flex;    
+	align-items: center;
+	@include lg {
+		justify-content: space-between;
+	}
+	&__img {
+		@include flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		justify-content: space-between;
+		@include md {
+				flex-wrap: wrap
+		}
+		@include lg {
+				max-width: calc(50% - 40px);
+		}
+		@include lg-down {
+				margin-bottom: 40px;
+		}
+		&--single {
+			max-width: calc(50% - 10px);
+			width: 100%;
+		}
+		&--vertical {
+			@include flex;
+			flex-direction: column;
+			justify-content: space-between;
+			max-width: calc(50% - 10px);
+			width: 100%; 
+			@include md-down {
+				margin-left: 15px;
+			} 
+		}
+	}
+	&__content {    
+		@include lg {
+			max-width: calc(50% - 40px);
+		}
+		&--title {
+			font-size: rem(28);
+			line-height: 36px;
+			@include md {
+				font-size: rem(36);
+				line-height: 43px;
+			}
+		}
+		&--sub-title {
+			font-size: rem(16);
+			line-height: 22px;
+			font-weight: $font-weight-regular;
+			margin-bottom: 25px;
+			@include md {
+				font-size: rem(24);
+				line-height: 28px;
+				margin-bottom: 40px;
+			}
+		}
+		&--description {
+			@include relative;
+			padding-left: 25px;
+			@include md {
+				font-size: rem(20);
+				line-height: 32px;
+				margin-bottom: 40px;
+			}
+
+			&::before {
+				content: '';
+				height: 100%;
+				width: 3px;
+				background: $color-blue;
+				@include absolute(left 0 top 0)
+			}  
+		}
+	}
+}

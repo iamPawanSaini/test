@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+
+    <link rel="stylesheet" href="./build/css/style.min.css" />
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="A brief description of the page content"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Web Development" />
+    <meta name="author" content="Your Name" />
+  </head>
+  <body>
+    <a href="#main-content" class="hidden">Skip to main content</a>
+    <header class="header" aria-label="header">
+      <div class="container">
+        <div class="navigation-menu">
+          <div class="logo-wrapper">
+            <a href="#" aria-label="site-logo">
+              <img src="./icons/logo.svg" alt="logo"
+            /></a>
+            <button
+              class="navbar-toggle"
+              type="button"
+              data-target="#navigation-content"
+              aria-controls="navigation-content"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="search-wrapper">
+            <a href="#search" class="search-btn" aria-label="search">
+              <img src="./icons/search.svg" alt="search-icon"
+            /></a>
+            <div id="search" class="search-popup">
+              <span class="close">X</span>
+              <form action="/search" method="get" class="search-popup__form">
+                <label for="search-box" class="hidden">Search</label>
+                <input
+                  type="text"
+                  id="search-box"
+                  class="search-popup__form--input"
+                  name="search"
+                />
+                <button type="submit" class="search-popup__form--btn">
+                  <img src="./icons/search.svg" alt="search-icon" />
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="navigation-menu__wrapper" id="navigation-content">
+            <nav class="nav" aria-label="main-navigation" role="navigation">
+              <h2 class="hidden" id="main-navigation">Subheader</h2>
+              <ul class="nav">
+                <li class="nav__item">
+                  <a href="#about" class="nav__item--link">About us</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#destinations" class="nav__item--link"
+                    >Destinations</a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a href="#packages" class="nav__item--link">Packages</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#testimonial" class="nav__item--link">Testimonial</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contact" class="nav__item--link">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <a id="main-content" tabindex="-1"></a>
+      <section id="banner" class="homepage-banner">
+        <div class="homepage-banner__content">
+          <div class="homepage-banner__content--wrapper">
+            <h1 class="homepage-banner__content--title">
+              Lorem ipsum dolor sit amet consectetur.
+            </h1>
+            <p class="homepage-banner__content--text">
+              Lorem ipsum dolor sit amet consectetur. Nibh amet mi nullam mauris
+              commodo mus euismod. Lacus in curabitur scelerisque amet eu enim.
+              Arcu consectetur venenatis mauris enim rhoncus.
+            </p>
+            <a href="tel:8239637445" class="btn btn__primary banner-btn">
+              <img src="./icons/ic_baseline-phone.svg" alt="phone-icon" /> Book
+              a call</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about-wrapper">
+            <div class="about-wrapper__img">
+              <div class="about-wrapper__img--single">
+                <div class="img-wrapper">
+                  <img
+                    src="./images/Service-Logo-design.jpg"
+                    alt="service image"
+                  />
+                </div>
+              </div>
+              <div class="about-wrapper__img--vertical">
+                <div class="img-wrapper">
+                  <img
+                    src="./images/Service-Logo-design-2.jpg"
+                    alt="service-logo"
+                  />
+                </div>
+                <div class="img-wrapper">
+                  <img
+                    src="./images/Service-Logo-design-1.jpg"
+                    alt="service-image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="about-wrapper__content">
+              <h3 class="about-wrapper__content--title">About Us</h3>
+              <h4 class="about-wrapper__content--sub-title">
+                Discover the various breathtaking locations
+              </h4>
+              <p class="about-wrapper__content--description">
+                Lorem ipsum dolor sit amet consectetur. In at amet semper velit
+                elit nisi faucibus arcu. Bibendum nulla porttitor faucibus
+                bibendum erat a vulputate sed. Quisque quis viverra turpis at
+                erat vel ut metus congue. Sed senectus ullamcorper imperdiet sit
+                fermentum. Fermentum faucibus proin hac sed condimentum euismod
+                felis risus.
+              </p>
+              <a
+                href="#"
+                class="btn btn__primary"
+                aria-label="Read more about us"
+              >
+                Read More <img src="./icons/ArrowRight.svg" alt="Arrow-Right" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="destinations bg-secondary">
+        <div class="container">
+          <div class="heading-with-arrows">
+            <div class="headings">
+              <h3 class="headings__title">Destinations</h3>
+              <p class="headings__text">
+                Discover the various breathtaking locations
+              </p>
+            </div>
+            <div class="custom-nav">
+              <button class="custom-prev">
+                <img src="./icons/ArrowRight.svg" alt="previous" />
+              </button>
+              <button class="custom-next">
+                <img src="./icons/ArrowRight.svg" alt="next" />
+              </button>
+            </div>
+          </div>
+          <div class="destinations-slider">
+            <div class="destinations-slider__card">
+              <div class="destinations-slider__img">
+                <img src="./images/destination-1.jpg" alt="destinations" />
+              </div>
+              <div class="destinations-slider__content">
+                <h3 class="destinations-slider__content--title">Bunaken Sea</h3>
+                <p class="destinations-slider__content--description">
+                  Lorem ipsum dolor sit amet consectetur. In at amet semper
+                </p>
+                <a
+                  href="#"
+                  class="btn destinations-slider__content--btn"
+                  aria-label="view detailes about destinations"
+                >
+                  View detailes
+                </a>
+              </div>
+            </div>
+            <div class="destinations-slider__card">
+              <div class="destinations-slider__img">
+                <img src="./images/destination-2.jpg" alt="destinations" />
+              </div>
+              <div class="destinations-slider__content">
+                <h3 class="destinations-slider__content--title">Bunaken Sea</h3>
+                <p class="destinations-slider__content--description">
+                  Lorem ipsum dolor sit amet consectetur. In at amet semper
+                </p>
+                <a
+                  href="#"
+                  class="btn destinations-slider__content--btn"
+                  aria-label="view detailes about destinations"
+                >
+                  View detailes
+                </a>
+              </div>
+            </div>
+            <div class="destinations-slider__card">
+              <div class="destinations-slider__img">
+                <img src="./images/destination-1.jpg" alt="destinations" />
+              </div>
+              <div class="destinations-slider__content">
+                <h3 class="destinations-slider__content--title">Bunaken Sea</h3>
+                <p class="destinations-slider__content--description">
+                  Lorem ipsum dolor sit amet consectetur. In at amet semper
+                </p>
+                <a
+                  href="#"
+                  class="btn destinations-slider__content--btn"
+                  aria-label="view detailes about destinations"
+                >
+                  View detailes
+                </a>
+              </div>
+            </div>
+            <div class="destinations-slider__card">
+              <div class="destinations-slider__img">
+                <img src="./images/destination-3.jpg" alt="destinations" />
+              </div>
+              <div class="destinations-slider__content">
+                <h3 class="destinations-slider__content--title">Bunaken Sea</h3>
+                <p class="destinations-slider__content--description">
+                  Lorem ipsum dolor sit amet consectetur. In at amet semper
+                </p>
+                <a
+                  href="#"
+                  class="btn destinations-slider__content--btn"
+                  aria-label="view detailes about destinations"
+                >
+                  View detailes
+                </a>
+              </div>
+            </div>
+            <div class="destinations-slider__card">
+              <div class="destinations-slider__img">
+                <img src="./images/destination-1.jpg" alt="destinations" />
+              </div>
+              <div class="destinations-slider__content">
+                <h3 class="destinations-slider__content--title">Bunaken Sea</h3>
+                <p class="destinations-slider__content--description">
+                  Lorem ipsum dolor sit amet consectetur. In at amet semper
+                </p>
+                <a
+                  href="#"
+                  class="btn destinations-slider__content--btn"
+                  aria-label="view detailes about destinations"
+                >
+                  View detailes
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="packages bg-primary">
+        <div class="container">
+          <div class="packages-inner">
+            <div class="packages-inner__left">
+              <div class="section-heading">
+                <h2 class="section-heading__title">Packages</h2>
+                <p class="section-heading__description">
+                  Choose your best package
+                </p>
+              </div>
+              <p class="packages-inner__left--description">
+                Lorem ipsum dolor sit amet consectetur. In at amet semper velit
+                elit nisi faucibus arcu. Bibendum nulla porttitor faucibus
+                bibendum erat a vulputate sed.
+              </p>
+              <ul class="packages-inner__list">
+                <li class="packages-inner__list--item">
+                  <h3 class="packages-inner__list--title">Golden Package</h3>
+                  <p class="packages-inner__list--text">
+                    Lorem ipsum dolor sit amet consectetur
+                  </p>
+                </li>
+                <li class="packages-inner__list--item">
+                  <h3 class="packages-inner__list--title">Silver Package</h3>
+                  <p class="packages-inner__list--text">
+                    Lorem ipsum dolor sit amet consectetur
+                  </p>
+                </li>
+                <li class="packages-inner__list--item">
+                  <h3 class="packages-inner__list--title">Bronze Package</h3>
+                  <p class="packages-inner__list--text">
+                    Lorem ipsum dolor sit amet consectetur
+                  </p>
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn btn__primary"
+                aria-label="View package details"
+                >View package details
+                <img src="./icons/ArrowRight.svg" alt="View package details" />
+              </a>
+            </div>
+            <div class="packages-inner__right">
+              <div class="img-wrapper">
+                <img src="./images/package.jpg" alt="package image" />
+              </div>
+              <div class="img-wrapper">
+                <img src="./images/package1.jpg" alt="package image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial bg-secondary">
+        <div class="container">
+          <div class="heading-with-arrows">
+            <div class="headings">
+              <h3 class="headings__title">Destinations</h3>
+              <p class="headings__text">
+                Discover the various breathtaking locations
+              </p>
+            </div>
+            <div class="custom-nav">
+              <button class="testimonial-prev">
+                <img src="./icons/ArrowRight.svg" alt="previous" />
+              </button>
+              <button class="testimonial-next">
+                <img src="./icons/ArrowRight.svg" alt="next" />
+              </button>
+            </div>
+          </div>
+          <div class="testimonial-slider">
+            <div class="testimonial-slider__card">
+              <div class="testimonial-slider__img">
+                <div class="img-wrapper">
+                  <img src="./images/user.png" alt="user" />
+                </div>
+                <div class="testimonial-slider__author">
+                  <h5 class="testimonial-slider__author--title">Avril Song</h5>
+                  <div class="user-rating" data-rating="1"></div>
+                </div>
+              </div>
+              <div class="testimonial-slider__content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel
+                  sit dolor fringilla volutpat lectus amet. Integer sed pretium
+                  odio lectus at malesuada sed eget nunc.
+                </p>
+              </div>
+            </div>
+            <div class="testimonial-slider__card">
+              <div class="testimonial-slider__img">
+                <div class="img-wrapper">
+                  <img src="./images/user-1.png" alt="user" />
+                </div>
+                <div class="testimonial-slider__author">
+                  <h5 class="testimonial-slider__author--title">Avril Song</h5>
+                  <div class="user-rating" data-rating="2"></div>
+                </div>
+              </div>
+              <div class="testimonial-slider__content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel
+                  sit dolor fringilla volutpat lectus amet. Integer sed pretium
+                  odio lectus at malesuada sed eget nunc.
+                </p>
+              </div>
+            </div>
+            <div class="testimonial-slider__card">
+              <div class="testimonial-slider__img">
+                <div class="img-wrapper">
+                  <img src="./images/user-2.png" alt="user" />
+                </div>
+                <div class="testimonial-slider__author">
+                  <h5 class="testimonial-slider__author--title">Avril Song</h5>
+                  <div class="user-rating" data-rating="3.5"></div>
+                </div>
+              </div>
+              <div class="testimonial-slider__content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel
+                  sit dolor fringilla volutpat lectus amet. Integer sed pretium
+                  odio lectus at malesuada sed eget nunc.
+                </p>
+              </div>
+            </div>
+            <div class="testimonial-slider__card">
+              <div class="testimonial-slider__img">
+                <div class="img-wrapper">
+                  <img src="./images/user.png" alt="user" />
+                </div>
+                <div class="testimonial-slider__author">
+                  <h5 class="testimonial-slider__author--title">Avril Song</h5>
+                  <div class="user-rating" data-rating="5"></div>
+                </div>
+              </div>
+              <div class="testimonial-slider__content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel
+                  sit dolor fringilla volutpat lectus amet. Integer sed pretium
+                  odio lectus at malesuada sed eget nunc.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="contact-inner">
+            <div class="contact-inner__headings headings">
+              <h3 class="headings__title">Contact us</h3>
+              <p class="headings__text">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+            <div class="contact-inner__form">
+              <form action="submit-form.php" method="post">
+                <label for="email" class="hidden">Email:</label>
+                <input
+                  type="email"
+                  class="form-input"
+                  id="email"
+                  name="email"
+                  placeholder="name@domain.com"
+                  required
+                />
+                <span class="icon-mail"></span>
+                <button type="submit" class="submit-btn">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-primary">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__contact">
+            <div class="footer-logo">
+              <a href="#" class="footer__contact--logo" aria-label="site-logo">
+                <img src="./icons/logo-footer.svg" alt="logo"
+              /></a>
+              <h2>Byoerr</h2>
+            </div>
+            <div class="footer__contact--link">
+              <div>
+                <span class="mail">hello@byoerr.com </span>
+              </div>
+              <div>
+                <span class="phone">Phone : +01 23456789</span>
+              </div>
+            </div>
+
+            <div class="social-media">
+              <a
+                href="#"
+                class="social-media__link"
+                aria-label="follow us on facebook"
+                ><img src="./icons/Facebook.svg" alt=""
+              /></a>
+              <a
+                href="#"
+                class="social-media__link"
+                aria-label="follow us on Twitter"
+                ><img src="./icons/Twitter.svg" alt=""
+              /></a>
+              <a
+                href="#"
+                class="social-media__link"
+                aria-label="follow us on Instagram"
+                ><img src="./icons/Instagram.svg" alt=""
+              /></a>
+              <a
+                href="#"
+                class="social-media__link"
+                aria-label="follow us on Linkedin"
+                ><img src="./icons/Linkedin.svg" alt=""
+              /></a>
+              <a
+                href="#"
+                class="social-media__link"
+                aria-label="follow us on Youtube"
+                ><img src="./icons/Youtube.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="footer__links">
+            <div class="quick-links">
+              <h5 class="footer__links--heading">Quick Links</h5>
+              <nav class="nav" aria-label="quicklinks" role="navigation">
+                <h2 class="hidden" id="quicklinks">footer quicklink menu</h2>
+                <ul class="nav nav__stack">
+                  <li class="nav__item">
+                    <a href="#about" class="nav__item--link link">About us</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#destinations" class="nav__item--link link"
+                      >Destinations</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="#packages" class="nav__item--link link"
+                      >Packages</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="#testimonial" class="nav__item--link link"
+                      >Testimonial</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="#contact" class="nav__item--link link"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="quick-links">
+              <h5 class="footer__links--heading">Resources</h5>
+              <nav class="nav" aria-label="resource-menu" role="navigation">
+                <h2 class="hidden" id="resource-menu">footer resource menu</h2>
+                <ul class="nav nav__stack">
+                  <li class="nav__item">
+                    <a href="#about" class="nav__item--link link">About us</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#destinations" class="nav__item--link link"
+                      >Destinations</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="#packages" class="nav__item--link link"
+                      >Packages</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="#testimonial" class="nav__item--link link"
+                      >Testimonial</a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="#contact" class="nav__item--link link"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+
+    <script src="./build/js/main.min.js"></script>
+  </body>
+</html>

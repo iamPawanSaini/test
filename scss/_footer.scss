@@ -1,0 +1,86 @@
+/**
+ * @Files
+ * Footer Section Style.
+*/
+
+.footer {
+  padding: 50px 0;
+  @include md {
+    padding: 100px 0;
+  }
+  &__wrapper {
+    text-align: center;
+    @include md {
+      text-align: left;
+      @include flex;
+    }
+  }
+  &__contact {
+    margin-bottom: 30px;
+    width: 100%;
+    @include md {
+      max-width: 50%;
+    }
+    @include lg {
+      max-width: 65.46%;
+    }
+    &--logo {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    &--link {
+      margin-bottom: 20px;
+    }
+    .mail,
+    .phone {
+      font-family: $poppins-font-family;
+      font-weight: $font-weight-regular;
+      line-height: rem(30);
+    }
+  }
+  &__links {
+    width: 100%;
+    @include md {
+      @include flex;
+      justify-content: space-between;
+      max-width: 50%;
+    }
+    @include lg {
+      max-width: 34.54%;
+    }
+    &--heading {
+      font-size: rem(24);
+      margin-bottom: 30px;
+    }
+    .quick-links {
+      margin-bottom: 30px;
+    }
+  }
+  .footer-logo {
+    margin-bottom: 25px;
+  }
+  .social-media {
+    &__link {
+      display: inline-block;
+      padding: 6px;
+      max-width: 48px;
+      max-height: 48px;
+    }
+  }
+  .nav {
+    justify-content: center;
+    @include md {
+      width: 100%;
+    }
+    .link {
+      color: $white;
+      margin-right: 0;
+      padding: 8px 12px;
+      display: block;
+      font-size: rem(16);
+      @include md {
+        padding: 13px 12px;
+      }
+    }
+  }
+}

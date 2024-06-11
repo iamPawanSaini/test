@@ -1,0 +1,39 @@
+/**
+ * @Files
+ * Banner Section Style.
+*/
+.homepage-banner {
+  @include relative;
+  z-index: -1;
+  padding: 0;
+  background: url(../../images/neom.webp);
+  padding-top: 845px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include md {
+    padding-top: 100%;
+  }
+  &__content {
+    max-width: 1280px;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include absolute(left 0 right 0 bottom 33%);
+    @include md {
+      bottom: 48%;;
+    }
+    &--wrapper {
+      @include md {
+        max-width: 640px;
+      }
+    }
+    &--title {
+      font-family: $heading-font-family;
+      margin-bottom: 10px;
+    }
+    &--text {
+      line-height: 32px;
+    }
+  }    
+}
+

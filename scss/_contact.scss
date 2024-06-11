@@ -1,0 +1,80 @@
+/**
+ * @Files
+ * Contact Section Style.
+*/
+.contact {
+  background-image: url(../../images/contact.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-inner {
+  @include flex;
+  justify-content: space-between;
+  &__headings {
+    width: 100%;
+    @include md {
+      max-width: 47%;
+    }
+  }
+  &__form {
+    width: 100%;
+    @include relative;
+    @include md {
+      max-width: 51.25%;
+    }
+    .form-input {
+      width: 100%;
+      border: 0;
+      padding: 8px 8px 8px 60px;
+      border-radius: 16px;
+      background: $color-transparent;
+      height: 44px;
+      color: $white;
+      margin-bottom: 20px;
+      @include md {
+        margin: 0;
+        height: 74px;
+      }
+      &::placeholder {
+        font-size: rem(16);
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.4);
+        @include md {
+          font-size: rem(20);
+        }
+      }
+    }
+    .icon-mail {
+      width: 25px;
+      height: 20px;
+      background-image: url(../../icons/EnvelopeSimple.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include absolute(top 10px left 20px);
+      @include md {
+        top: 26px;
+      }
+    }
+
+    .submit-btn {
+      font-size: rem(16);
+      line-height: 33px;
+      padding: 6px 64px;
+      border: 0;
+      border-radius: 8px;
+      background: $secondary-color;
+      color: $white;
+      width: 100%;
+
+      @include md {
+        @include absolute(top 5px right 10px);
+        width: auto;
+        padding: 16px 28px;
+        font-size: rem(24);
+      }
+      @include lg {
+        padding: 16px 64px;
+      }
+    }
+  }
+}
